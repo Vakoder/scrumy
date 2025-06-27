@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { createClient } from '@supabase/supabase-js'
+import { supabase } from '@/lib/supabase'
 
 export default function AddParticipantForm({ projectCode, isCp }: { projectCode: string, isCp: boolean }) {
   const [name, setName] = useState('')
@@ -44,18 +45,13 @@ export default function AddParticipantForm({ projectCode, isCp }: { projectCode:
     }
 
     try {
-      const supabase = createClient(
-        process.env.NEXT_PUBLIC_SUPABASE_URL!,
-        process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-      )
-
       const { error: insertError } = await supabase
         .from('participants')
         .insert([{
           name: name.trim(),
           roles: selectedRoles,
           project_code: projectCode,
-          approved: isCp, // Auto-approuvé si ajouté par le CP
+          approved: isCp, 
           joined_at: new Date().toISOString()
         }])
 

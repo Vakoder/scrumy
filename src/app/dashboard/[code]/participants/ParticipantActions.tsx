@@ -1,5 +1,6 @@
 'use client'
 
+import { supabase } from '@/lib/supabase'
 import { createClient } from '@supabase/supabase-js'
 import { useRouter } from 'next/navigation'
 
@@ -27,11 +28,6 @@ export default function ParticipantActions({
   }
 
   const handleBan = async () => {
-    const supabase = createClient(
-      process.env.NEXT_PUBLIC_SUPABASE_URL!,
-      process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!
-    )
-    
     const { error } = await supabase
       .from('participants')
       .update({ banned: true })

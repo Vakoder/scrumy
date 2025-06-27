@@ -73,20 +73,8 @@ export default async function DashboardPage({ params }: { params: { code: string
                 <span className="text-gray-500">
                   Créé le {new Date(projet.created_at).toLocaleDateString('fr-FR')}
                 </span>
-                <span className="text-gray-400">•</span>
-                <span className="px-2 py-1 bg-gray-100 text-gray-800 rounded-full text-xs">
-                  Version {projet.version || 1}
-                </span>
               </div>
             </div>
-            
-            {/* Bouton d'action principal */}
-            <Link 
-              href={`/dashboard/${projet.code}/settings`}
-              className="px-4 py-2 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors flex items-center gap-2"
-            >
-              ⚙️ Paramètres
-            </Link>
           </div>
         </div>
 

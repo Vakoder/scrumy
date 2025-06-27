@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# Projet Full-Stack (back + front) E3 DAD
 
-First, run the development server:
+## Grille technique
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Le projet doit utiliser NextJS  -- OK
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Le projet sera déployé chez Vercel (App + BDD) -- OK
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Grille backend
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- La BDD peut être SQL ou noSQL (au choix, argumenté) -- SQL
 
-## Learn More
+- La BDD doit être gérée avec un framework. Le versionning du schéma doit être géré. Par exemple:
+  
+- Création de projet et insertion dans Table -- OK
 
-To learn more about Next.js, take a look at the following resources:
+- Rejoindre projet avec le code a 6 lettres -- OK
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Possibilité d'ajouter des users et leur attribuer des roles  + ajout dans la Table users -- OK
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Page pour la création de stories -- OK
 
-## Deploy on Vercel
+- Création de stories -- Pas OK (erreur pas acces a supabase ?)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Problèmes : 
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+    - Toutes les autres fonctions ne sont pas présentes
+    - N'importe qui peut ajouter des users (Je n'ai pas reussi a identifier les utilisateurs)
+    - L'option bannir ne fonctionne pas il y a juste le bouton 
+    - Pareil pour attribuer 
+    - Il y a un compte rendu du projet sur le dashboard mais avec des données fictives, c'est juste le front pour voir comment ça rendrais.
+
+
+
+Note : 10/20 
+
